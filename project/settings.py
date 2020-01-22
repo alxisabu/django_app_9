@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # third party
+     'crispy_forms',
     # custom app
     'news',
+    
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,11 @@ STATICFILES_DIRS = [
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'a9af8bc49d8d05'
+EMAIL_HOST_PASSWORD = 'b1a9a7c466d77b'
+EMAIL_PORT = '2525'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = "/"
